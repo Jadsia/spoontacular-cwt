@@ -2,7 +2,12 @@
 
 <Project Description>
 
-This app powers CDC Data located [here](Heroku Project URL)
+This app powers CDC Data located [here](https://cdc-data.herokuapp.com)
+
+## Project Metrics
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/4770656622e78550de88/maintainability)](https://codeclimate.com/github/conradwt/cdc-data/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4770656622e78550de88/test_coverage)](https://codeclimate.com/github/conradwt/cdc-data/test_coverage)
 
 ## Getting Started
 
