@@ -2,7 +2,7 @@
 
 <Project Description>
 
-This app powers CDC Data located [here](https://cdc-data.herokuapp.com)
+This app powers CDC Data located [here](https://cdc-data.herokuapp.com) Search CDC data and Census data side by side for population level comparison or relevant data.
 
 ## Project Metrics
 
