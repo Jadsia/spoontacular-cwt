@@ -18,6 +18,7 @@ gem 'puma',                     '~> 3.11'
 gem 'sass-rails',               '~> 5.0'
 gem 'simple_form',              '~> 4.1'
 
+gem 'tether-rails',             '~> 1.4'
 gem 'turbolinks',               '~> 5'
 
 gem 'uglifier',                 '>= 1.3.0'
