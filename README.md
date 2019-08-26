@@ -1,6 +1,8 @@
-# CDC Data
-
+#SelectedSpoontacular
 <Project Description>
+   
+This app offers users text and video recipes by food name, ingredient, and calorie requirements. Users can also search for wine pairings, and get food related trivia. 
+
 
 This app powers CDC Data located [here](https://cdc-data.herokuapp.com)
 
