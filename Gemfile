@@ -50,3 +50,5 @@ gem 'dotenv-rails'
 gem 'faraday'
 
 gem 'devise'
+
+gem 'devise'
