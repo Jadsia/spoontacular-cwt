@@ -1,8 +1,8 @@
-# CDC Data
+# Spoontacular
 
 <Project Description>
 
-This app powers CDC Data located [here](https://cdc-data.herokuapp.com)
+This app powers Spoontacular located [here](https://spoontacular.herokuapp.com)
 
 ## Project Metrics
 
@@ -71,11 +71,11 @@ $ heroku run rake db:migrate
 
 Bug reports and feature requests can be filed with the rest for the Ruby on Rails project here:
 
-- [File Bug Reports and Features](https://github.com/conradwt/cdc_data/issues)
+- [File Bug Reports and Features](https://github.com/conradwt/spoontacular/issues)
 
 ## License
 
-CDC Data is released under the [MIT license](https://mit-license.org).
+Spoontacular is released under the [MIT license](https://mit-license.org).
 
 ## Copyright
 

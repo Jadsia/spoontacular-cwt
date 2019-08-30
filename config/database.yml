@@ -86,3 +86,6 @@ production:
   database: cdc_data_production
   username: cdc_data
   password: <%= ENV['CDC_DATA_DATABASE_PASSWORD'] %>
+
+```
+git checkjout
