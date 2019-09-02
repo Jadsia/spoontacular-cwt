@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :recipes, only: :create
   end
   get 'about', to: 'recipes#about'
-  get '/search', to: 'recipes#searchByIngredients', as: 'search'
+  get '/search', to: 'search#index', as: 'search'
+  get '/searchByIngredients', to: 'recipes#searchByIngredients', as: 'searchByIngredients'
+  get '/searchByName', to: 'recipes#searchByName', as: 'searchByName'
 end
 
 
