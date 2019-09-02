@@ -4,6 +4,10 @@
 
 This app powers Spoontacular located [here](https://spoontacular.herokuapp.com)
 
+## Reading and Resources
+
+[Individual Project Guidelines](./INDIVIDUAL-PROJECT.md)
+
 ## Project Metrics
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/610d3321919a555442c3/maintainability)](https://codeclimate.com/github/conradwt/spoontacular/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/610d3321919a555442c3/test_coverage)](https://codeclimate.com/github/conradwt/spoontacular/test_coverage)
