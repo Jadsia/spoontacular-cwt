@@ -41,6 +41,8 @@
    d. submit a pull-request (PR) with issue(s) implemented for review
    e. if PR is approved, mentor will merge into `master` branch and update Github project. The student will deploy to Heroku and go to (9a). Otherwise, go back to step (9c)
 
+   Note: FYI, if the user story is `As a user, I can create a widget`, then the branch name should be something like _user-creates-widget_ and the feature spec should be _user_creates_widget_spec.rb_.
+
 10. create a project video and it should contain the following:
 
     a. full name
