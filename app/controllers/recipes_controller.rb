@@ -12,6 +12,13 @@ class RecipesController < ApplicationController
     @recipes = Recipe.find(params[:id])
   end
 
+  def searchByName
+    search = params[:searchTerm]
+    @results = SearchrecipeController.new.searchByName(search)[:Recipes]
+    puts "searchByName results type: "
+    puts @results.class
+  end
+
   def searchByIngredients
     search = params[:searchTerm]
     @results = SearchrecipeController.new.searchbyingredient(search)
@@ -49,9 +56,6 @@ class RecipesController < ApplicationController
     SearchrecipeController.new.searchnutritioninfo
   end
 
-  def searchfoodname
-    SearchrecipeController.new.searchfoodname
-  end
 
   def
 

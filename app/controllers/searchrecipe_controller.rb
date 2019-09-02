@@ -4,19 +4,21 @@ require 'openssl'
 
 class SearchrecipeController <  ApplicationController
 
-  def test
-    url = URI("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=apples%2Cflour%2Csugar")
+  def searchByName(name)
+    # uses 'search site content'
+    conn = Faraday.new(:url => "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/site/search?query=" + name)
 
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = true
-    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-
-    request = Net::HTTP::Get.new(url)
-    request["x-rapidapi-host"] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
-    request["x-rapidapi-key"] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
-
-    response = http.request(request)
-    puts response.read_body
+    response = conn.get do |req|
+      # GET http://sushi.com/search?page=2&limit=100
+        req.headers['x-rapidapi-host'] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+        req.headers['x-rapidapi-key'] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
+    end
+    array_response = eval(response.body)
+    puts "-------------------START ----------------------------"
+    puts eval(response.body)
+    puts "Array size " + array_response.length.to_s
+    puts "-------------------END ----------------------------"
+    return array_response
   end
 
   def searchbyingredient (ingredients)
@@ -154,21 +156,7 @@ class SearchrecipeController <  ApplicationController
     puts response.read_body
   end
 
-  def searchfoodname
-    # uses 'search site content'
-    url = URI("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/site/search?query=past")
 
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = true
-    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-
-    request = Net::HTTP::Get.new(url)
-    request["x-rapidapi-host"] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
-    request["x-rapidapi-key"] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
-
-    response = http.request(request)
-    puts response.read_body
-  end
 
 
 end
