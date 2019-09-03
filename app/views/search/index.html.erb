@@ -1,5 +1,6 @@
 <h1>Search Page</h1>
 
+
 <%= form_tag(searchByName_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "Search By Name" %>
       <%= submit_tag "Search", :name => nil %>
@@ -10,3 +11,8 @@
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "Search By Ingredients" %>
       <%= submit_tag "Search", :name => nil %>
     <% end %>
+
+ <%= form_tag(searchWinePairing_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "Search Wine Pairing" %>
+      <%= submit_tag "Search", :name => nil %>
+<% end %>

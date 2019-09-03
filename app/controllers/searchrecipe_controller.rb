@@ -9,7 +9,6 @@ class SearchrecipeController <  ApplicationController
     conn = Faraday.new(:url => "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/site/search?query=" + name)
 
     response = conn.get do |req|
-      # GET http://sushi.com/search?page=2&limit=100
         req.headers['x-rapidapi-host'] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
         req.headers['x-rapidapi-key'] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
     end
@@ -24,7 +23,7 @@ class SearchrecipeController <  ApplicationController
   def searchbyingredient (ingredients)
     conn = Faraday.new(:url => "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=" + ingredients)
 
-    response = conn.get do |req|                           # GET http://sushi.com/search?page=2&limit=100
+    response = conn.get do |req|
         req.headers['x-rapidapi-host'] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
         req.headers['x-rapidapi-key'] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
     end
@@ -36,19 +35,19 @@ class SearchrecipeController <  ApplicationController
     return array_response
   end
 
-  def searchwinepairing
-    url = URI("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/pairing?maxPrice=50&food=")
+  def searchWinePairing (food)
+    conn = Faraday.new(:url => "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/pairing?maxPrice=50&food=" + food)
 
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = true
-    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-
-    request = Net::HTTP::Get.new(url)
-    request["x-rapidapi-host"] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
-    request["x-rapidapi-key"] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
-
-    response = http.request(request)
-    puts response.read_body
+    response = conn.get do |req|
+      req.headers['x-rapidapi-host'] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+      req.headers['x-rapidapi-key'] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
+  end
+  array_response = eval(response.body)
+  puts "-------------------START ----------------------------"
+  puts eval(response.body)
+  puts "Array size " + array_response.length.to_s
+  puts "-------------------END ----------------------------"
+  return array_response
   end
 
   def searchvideo
