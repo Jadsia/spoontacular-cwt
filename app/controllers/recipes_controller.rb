@@ -24,7 +24,6 @@ class RecipesController < ApplicationController
     @results = SearchrecipeController.new.searchbyingredient(search)
   end
 
-  # start here, adding :var did not help
   def searchWinePairing
     search = params[:searchTerm]
     @results = SearchrecipeController.new.searchWinePairing(search)[:pairedWines]

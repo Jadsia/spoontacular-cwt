@@ -52,7 +52,7 @@ class SearchrecipeController <  ApplicationController
   end
 
   def searchvideo(videoname)
-    conn = Faraday.new(:url => "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/videos/search?query=chicken%20soup&excludeingredients=mustard&includeingredients=chicken&minLength=0&maxLength=999&offset=0&number=10" + videoname)
+    conn = Faraday.new(:url => "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/videos/search?query=" + videoname)
     response = conn.get do |req|
       req.headers['x-rapidapi-host'] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
       req.headers['x-rapidapi-key'] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
