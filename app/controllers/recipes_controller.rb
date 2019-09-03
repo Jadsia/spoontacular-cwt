@@ -27,6 +27,7 @@ class RecipesController < ApplicationController
   def searchWinePairing
     search = params[:searchTerm]
     @results = SearchrecipeController.new.searchWinePairing(search)
+    puts @results.class
   end
 
   def searchvideo
