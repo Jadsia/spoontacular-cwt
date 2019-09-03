@@ -16,3 +16,8 @@
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "Search Wine Pairing" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
+
+<%= form_tag(searchVideo_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "Search Videos" %>
+      <%= submit_tag "Search", :name => nil %>
+<% end %>
