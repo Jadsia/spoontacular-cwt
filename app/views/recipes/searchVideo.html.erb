@@ -1,8 +1,11 @@
 <h1> Results here! </h1>
 
-<% @results.each { |result| %>
+<% @results[:videos].each { |result| %>
 <div>
    <%=  result[:title] %>
-   <%= video_tag( result[:video], alt: result[:title] ) %>
+   <%=  result[:youTubeId] %>
+   <%#= video_tag( result[:youTubeId], alt: result[:title] ) %>
+    <%=  result[:rating] %>
+     <%=  result[:thumbnail] %>
 </div><br />
  <% } %>
