@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/search', to: 'search#index', as: 'search'
   get '/searchByIngredients', to: 'recipes#searchByIngredients', as: 'searchByIngredients'
   get '/searchByName', to: 'recipes#searchByName', as: 'searchByName'
-  get '/searchWinePairing', to: 'recipes#SearchWinePairing', as: 'searchWinePairing'
+  get '/searchWinePairing', to: 'recipes#searchWinePairing', as: 'searchWinePairing'
 end
 
 
