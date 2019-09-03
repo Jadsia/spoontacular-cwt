@@ -24,14 +24,18 @@ class RecipesController < ApplicationController
     @results = SearchrecipeController.new.searchbyingredient(search)
   end
 
+  # start here, adding :var did not help
   def searchWinePairing
     search = params[:searchTerm]
-    @results = SearchrecipeController.new.searchWinePairing(search)
+    @results = SearchrecipeController.new.searchWinePairing(search)[:pairedWines]
     puts @results.class
   end
 
-  def searchvideo
-    SearchrecipeController.new.searchvideo
+  def searchVideo
+    search = params[:searchTerm]
+    @results = SearchrecipeController.new.searchvideo(search)
+    puts "searchByName results type: "
+    puts @results.class
   end
 
   def convertunits

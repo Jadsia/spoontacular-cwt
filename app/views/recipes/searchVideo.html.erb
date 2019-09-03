@@ -1,0 +1,8 @@
+<h1> Results here! </h1>
+
+<% @results.each { |result| %>
+<div>
+   <%=  result[:title] %>
+   <%= video_tag( result[:video], alt: result[:title] ) %>
+</div><br />
+ <% } %>

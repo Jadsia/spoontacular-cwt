@@ -3,6 +3,6 @@
 <% @results.each { |result| %>
 <div>
    <%=  result[:pairedWines] %>
-   <%= ( result[:pairingText], alt: result[:title] ) %>
+   <%= text_area_tag( result[:pairingText], alt: result[:title] ) %>
 </div><br />
  <% } %>
