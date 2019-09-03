@@ -1,8 +1,14 @@
 <h1> Results here! </h1>
-
-<% @results.each { |result| %>
 <div>
-   <%=  result[:pairedWines] %>
-   <%= ( result[:pairingText], alt: result[:title] ) %>
+   <% @results[:pairedWines].each { |wine| %>
+    <%=  wine %>
+    <% }%>
+    <%=  @results[:pairingText] %>
+    <% @results[:productMatches].each { |product| %>
+       <%= product[:title] %>
+      <%=  product[:description] %>
+      <%=  product[:price] %>
+      <%=  product[:imageUrl] %>
+    <% } %>
+
 </div><br />
- <% } %>
