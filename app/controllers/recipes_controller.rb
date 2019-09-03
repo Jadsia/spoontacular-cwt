@@ -63,8 +63,12 @@ class RecipesController < ApplicationController
     puts @results.class
   end
 
+  #returns nil result, unclear if it takes argument
   def searchrecipeid
-    SearchrecipeController.new.searchrecipeid
+    search = params[:searchTerm]
+    @results = SearchrecipeController.new.searchrecipeid(aNumber)
+    puts "searchByName results type: "
+    puts @results.class
   end
 
   def getfoodtrivia

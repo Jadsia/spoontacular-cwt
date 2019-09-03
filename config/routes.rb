@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/searchVideo', to: 'recipes#searchVideo', as: 'searchVideo'
   get '/convertUnits', to: 'recipes#convertUnits', as: 'convertUnits'
   get '/searchCalories', to: 'recipes#searchCalories', as: 'searchCalories'
+  get '/searchRecipeId', to: 'recipes#searchRecipeId', as: 'searchRecipeId'
+
 end
 
 
