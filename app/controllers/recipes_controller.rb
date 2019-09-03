@@ -37,8 +37,20 @@ class RecipesController < ApplicationController
     puts @results.class
   end
 
-  def convertunits
-    SearchrecipeController.new.convertunits
+  def convertUnits
+    puts " "
+    puts " "
+    puts " "
+    puts " "
+    puts "In convertunits"
+    search = params[:searchTerm]
+    searchTerms = search.split(",")
+    unit = searchTerms[0].strip
+    ingredientname = searchTerms[1].strip
+    targetunit = searchTerms[2].strip
+    @results = SearchrecipeController.new.convertUnits(unit, ingredientname, targetunit)
+    puts "convertunits results type: "
+    puts @results.class
   end
 
   def searchcalories
