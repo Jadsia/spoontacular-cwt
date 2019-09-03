@@ -72,7 +72,7 @@ class RecipesController < ApplicationController
   end
 
         #simple get/text. Need any additional lines?
-  def getfoodtrivia
+  def getFoodTrivia
     SearchrecipeController.new.getfoodtrivia
   end
 
