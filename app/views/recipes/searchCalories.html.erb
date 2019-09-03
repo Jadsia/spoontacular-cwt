@@ -1,0 +1,13 @@
+<h1> Results here! </h1>
+
+<% @results[:meals].each { |result| %>
+<div>
+   <%=  result[:title] %>
+</div><br />
+ <% } %>
+
+ <div>
+   <%=  @results[:nutrients][:calories] %>
+   <%=  @results[:nutrients][:protein] %>
+ </div>
+

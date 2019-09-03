@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/searchWinePairing', to: 'recipes#searchWinePairing', as: 'searchWinePairing'
   get '/searchVideo', to: 'recipes#searchVideo', as: 'searchVideo'
   get '/convertUnits', to: 'recipes#convertUnits', as: 'convertUnits'
+  get '/searchCalories', to: 'recipes#searchCalories', as: 'searchCalories'
 end
 
 
