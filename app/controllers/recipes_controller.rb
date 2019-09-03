@@ -71,6 +71,7 @@ class RecipesController < ApplicationController
     puts @results.class
   end
 
+        #simple get/text. Need any additional lines?
   def getfoodtrivia
     SearchrecipeController.new.getfoodtrivia
   end
