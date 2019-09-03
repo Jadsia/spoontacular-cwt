@@ -31,3 +31,8 @@
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "number of cals, per time" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
+
+<%= form_tag(searchRecipeId_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "enter any recipe id" %>
+      <%= submit_tag "Search", :name => nil %>
+<% end %>
