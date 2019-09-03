@@ -86,35 +86,33 @@ class SearchrecipeController <  ApplicationController
       return array_response
   end
 
-  def searchcalories
-    url = URI("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate?targetCalories=2000&timeFrame=day")
-
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = true
-    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-
-    request = Net::HTTP::Get.new(url)
-    request["x-rapidapi-host"] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
-    request["x-rapidapi-key"] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
-
-    response = http.request(request)
-    puts response.read_body
+  def searchCalories(numbercalories, time)
+    conn = Faraday.new(:url => "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate?targetCalories=" + numbercalories + "&timeFrame=" + time)
+    response = conn.get do |req|
+      req.headers['x-rapidapi-host'] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+      req.headers['x-rapidapi-key'] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
+      end
+      array_response = eval(response.body)
+      puts "-------------------START ----------------------------"
+      puts eval(response.body)
+      puts "Array size " + array_response.length.to_s
+      puts "-------------------END ----------------------------"
+      return array_response
   end
 
-  def searchrecipeid
-    url = URI("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/156992/similar")
-
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = true
-    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-
-    request = Net::HTTP::Get.new(url)
-    request["x-rapidapi-host"] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
-    request["x-rapidapi-key"] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
-
-    response = http.request(request)
-    puts response.read_body
-  end
+  #unclear if it takes an argument, see test
+  def searchRecipeId(aNumber)
+    conn = Faraday.new(:url => "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/" + aNumber + "/similar")
+    response = conn.get do |req|
+      req.headers['x-rapidapi-host'] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+      req.headers['x-rapidapi-key'] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
+      end
+      array_response = eval(response.body)
+      puts "-------------------START ----------------------------"
+      puts eval(response.body)
+      puts "Array size " + array_response.length.to_s
+      puts "-------------------END ----------------------------"
+      return array_response  end
 
   def getfoodtrivia
     url = URI("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/trivia/random")

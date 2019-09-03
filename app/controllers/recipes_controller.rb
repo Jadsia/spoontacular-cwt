@@ -53,8 +53,14 @@ class RecipesController < ApplicationController
     puts @results.class
   end
 
-  def searchcalories
-    SearchrecipeController.new.searchcalories
+  def searchCalories
+    search = params[:searchTerm]
+    searchTerms = search.split(",")
+    numbercalories = searchTerms[0].strip
+    time = searchTerms[1].strip
+    @results = SearchrecipeController.new.searchCalories(numbercalories, time)
+    puts "searchByName results type: "
+    puts @results.class
   end
 
   def searchrecipeid
