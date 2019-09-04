@@ -86,8 +86,11 @@ class RecipesController < ApplicationController
     puts @results.class
   end
 
-  def searchnutritioninfo
-    SearchrecipeController.new.searchnutritioninfo
+  def searchNutritionInfo
+    search = params[:searchTerm]
+    @results = SearchrecipeController.new.searchNutritionInfo(search)
+    puts "nutrition info results type: "
+    puts @results.class
   end
 
   def new
