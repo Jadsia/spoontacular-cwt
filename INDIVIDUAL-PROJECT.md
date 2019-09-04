@@ -37,6 +37,7 @@
    Note: https://www.mountaingoatsoftware.com/agile/user-stories
 
 9. for each user-story in user-stories
+
    a) move the user-story into 'in progress' on Github Project
    
    b) create a feature branch for the user story
