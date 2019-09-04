@@ -42,15 +42,15 @@
    
    b) create a feature branch for the user story
    
-   c) move the user-story into 'in progess' on Github Project
+   c) move the user-story into `in progress` on Github Project
    
-   d) implement the user-story
+   d) implement the user-story using TDD
    
    e) submit a pull-request (PR) with issue(s) implemented for review
    
-   f) if PR is approved, mentor will merge into `master` branch and update Github project. The student will deploy to Heroku and go to (9a). Otherwise, go back to step (9c)
+   f) if PR is approved, mentor will merge into `master` branch and update Github project. The student will deploy to Heroku and go to (9a). Otherwise, go back to step (9d)
 
-   Note: FYI, if the user story is `As a user, I can create a widget`, then the branch name should be something like _user-creates-widget_ and the feature spec should be _user_creates_widget_spec.rb_.
+   Note: FYI, if the user story is `As a user, I can create a widget`, then the branch name should be something like `user-creates-widget` and the feature spec should be `user_creates_widget_spec.rb`.
 
 10. create a project video and it should contain the following:
 
