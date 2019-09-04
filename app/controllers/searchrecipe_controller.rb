@@ -112,18 +112,24 @@ class SearchrecipeController <  ApplicationController
       puts eval(response.body)
       puts "Array size " + array_response.length.to_s
       puts "-------------------END ----------------------------"
-      return array_response  end
+      return array_response
+    end
 
       #simple get/text. Need array lines?
   def getFoodTrivia
-    conn = Faraday.new(:url => "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/" + aNumber + "/similar")
+    puts
+    conn = Faraday.new(:url => "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/trivia/random")
     response = conn.get do |req|
       req.headers['x-rapidapi-host'] = 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
       req.headers['x-rapidapi-key'] = 'f05ecfa481msha20ba546f240359p10d22cjsn835758945c8c'
       end
 
-    response = http.request(request)
-    puts response.read_body
+      array_response = eval(response.body)
+      puts "-------------------START ----------------------------"
+      puts eval(response.body)
+      puts "Array size " + array_response.length.to_s
+      puts "-------------------END ----------------------------"
+      return array_response
   end
 
   def searchQuickAnswer(search)

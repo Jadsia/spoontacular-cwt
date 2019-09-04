@@ -73,7 +73,10 @@ class RecipesController < ApplicationController
 
         #simple get/text. Need any additional lines?
   def getFoodTrivia
-    SearchrecipeController.new.getfoodtrivia
+    @results =   SearchrecipeController.new.getFoodTrivia
+    puts "getFoodTrivia results type: "
+    puts @results.class
+
   end
 
   def searchQuickAnswer
