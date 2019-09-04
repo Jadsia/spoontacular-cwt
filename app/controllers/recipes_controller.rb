@@ -82,7 +82,7 @@ class RecipesController < ApplicationController
   def searchQuickAnswer
     search = params[:searchTerm]
     @results = SearchrecipeController.new.searchQuickAnswer(search)
-    puts "searchByName results type: "
+    puts "quick answer results type: "
     puts @results.class
   end
 
