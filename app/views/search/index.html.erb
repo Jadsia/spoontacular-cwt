@@ -46,3 +46,8 @@
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "enter question here" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
+
+<%= form_tag(searchNutritionInfo_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "enter dish name" %>
+      <%= submit_tag "Search", :name => nil %>
+<% end %>
