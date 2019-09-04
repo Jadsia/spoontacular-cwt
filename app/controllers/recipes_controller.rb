@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
+  #add browse method for API recipes
   def index
    @recipes = Recipe.all
    puts "in index method"
