@@ -84,9 +84,6 @@ class RecipesController < ApplicationController
     SearchrecipeController.new.searchnutritioninfo
   end
 
-
-  def
-
   def new
     @recipe = Recipe.new
   end
