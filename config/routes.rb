@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/searchCalories', to: 'recipes#searchCalories', as: 'searchCalories'
   get '/searchRecipeId', to: 'recipes#searchRecipeId', as: 'searchRecipeId'
   get '/searchgetFoodTrivia', to: 'recipes#getFoodTrivia', as: 'getFoodTrivia'
+  get '/searchQuickAnswer', to: 'recipes#searchQuickAnswer', as: 'searchQuickAnswer'
 end
 
 

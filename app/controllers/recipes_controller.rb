@@ -76,8 +76,11 @@ class RecipesController < ApplicationController
     SearchrecipeController.new.getfoodtrivia
   end
 
-  def quickanswer
-    SearchrecipeController.new.quickanswer
+  def searchQuickAnswer
+    search = params[:searchTerm]
+    @results = SearchrecipeController.new.searchQuickAnswer(search)
+    puts "searchByName results type: "
+    puts @results.class
   end
 
   def searchnutritioninfo
