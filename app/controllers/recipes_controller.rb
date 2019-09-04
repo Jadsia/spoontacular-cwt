@@ -91,8 +91,6 @@ class RecipesController < ApplicationController
   end
 
 
-  def
-
   def new
     @recipe = Recipe.new
   end
@@ -107,11 +105,6 @@ class RecipesController < ApplicationController
   def recipe_params
     params.require(:recipe).permit(:name, :ingredients, :directions, :search)
   end
-
-  #works for all search functions?
-  #def query
-    #params.fetch(:query, {})
-  #end
 
 end
 
