@@ -1,3 +1,8 @@
 <h1> Results here! </h1>
 
-<%=  @results[:title] %>
+<% @results.each { |result| %>
+<div>
+   <%=  result[:title] %>
+   <%#= image_tag( result[:image], size: "160x100", alt: result[:title] ) %>
+</div><br />
+ <% } %>
