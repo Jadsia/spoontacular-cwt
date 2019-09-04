@@ -64,9 +64,9 @@ class RecipesController < ApplicationController
   end
 
   #returns nil result, unclear if it takes argument
-  def searchrecipeid
+  def searchRecipeId
     search = params[:searchTerm]
-    @results = SearchrecipeController.new.searchrecipeid(aNumber)
+    @results = SearchrecipeController.new.searchRecipeId(search)
     puts "searchByName results type: "
     puts @results.class
   end
