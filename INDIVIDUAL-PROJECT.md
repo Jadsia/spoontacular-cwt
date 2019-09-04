@@ -54,7 +54,9 @@
 
 10. create a project video and it should contain the following:
 
-    a) full name
+    a) student's full name
+    
+    b) project's name
     
     b) project overview
     
