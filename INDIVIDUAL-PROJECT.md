@@ -54,7 +54,7 @@
 
    ```bash
    git checkout master
-   git checkout -b user-creates-widget
+   git checkout -b user-creates-widget origin/master
    ```
 
    Next, one can use the following command to create the corresponding feature spec file as follows:
