@@ -1,8 +1,18 @@
 @import 'bootstrap';
 
+// body {
+//   background: image_url('recipebkg.jpg');
+//   font-family: 'Josefin Sans', sans-serif;
+//   background-repeat: no-repeat;
+//   background-size: auto;
+// }
+
 body {
-  background: image_url('recipebkg.jpg');
-  font-family: 'Josefin Sans', sans-serif;
+  background: image_url('recipebkg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .navbar {
