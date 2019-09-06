@@ -1,7 +1,9 @@
 <h1> Results here! </h1>
 
+<br />
+
 <% @results.each { |result| %>
-<div>
+<div class="display-box w-50 col-10 offset-1">
    <%=  result[:name] %>
    <%= image_tag( result[:image], size: "160x100", alt: result[:title] ) %>
 </div><br />

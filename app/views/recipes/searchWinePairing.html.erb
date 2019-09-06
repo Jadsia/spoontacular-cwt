@@ -1,7 +1,9 @@
 <h1> Results here! </h1>
 
-<% @results.each { |result| %>
-<div>
+<br />
+
+<% @results[:pairedWines].each { |result| %>
+<div class="display-box w-50 col-10 offset-1">
    <%=  result[:pairedWines] %>
    <%= text_area_tag( result[:pairingText], alt: result[:title] ) %>
 </div><br />
