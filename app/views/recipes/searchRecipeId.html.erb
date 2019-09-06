@@ -1,3 +1,11 @@
 <h1> Results here! </h1>
 
-<%=  @results[:title] %>
+<br />
+
+<% @results.each { |result| %>
+<div class="display-box w-50 col-10 offset-1">
+   <%=  result[:title] %>
+</div><br />
+ <% } %>
+
+ <%# image not avail in endpint %>

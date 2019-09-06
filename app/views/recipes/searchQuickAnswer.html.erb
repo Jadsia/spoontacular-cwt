@@ -1,3 +1,8 @@
 <h1> Results here! </h1>
 
-<%=  @results[:title] %>
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+  <%=  @results[:answer] %>
+  <%= image_tag( @results[:image], size: "160x100", alt: @results[:title] ) %>
+</div>

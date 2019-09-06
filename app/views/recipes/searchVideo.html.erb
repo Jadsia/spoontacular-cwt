@@ -1,11 +1,11 @@
 <h1> Results here! </h1>
 
+<br />
+
 <% @results[:videos].each { |result| %>
-<div>
+<div class="display-box w-50 col-10 offset-1">
    <%=  result[:title] %>
-   <%=  result[:youTubeId] %>
-   <%#= video_tag( result[:youTubeId], alt: result[:title] ) %>
-    <%=  result[:rating] %>
-     <%=  result[:thumbnail] %>
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= result[:youTubeId] %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div><br />
  <% } %>

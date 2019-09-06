@@ -1,53 +1,117 @@
 <h1>Search Page</h1>
 
+<br />
 
+<div class="display-box w-50 col-10 offset-1">
+
+<p> Search for Recipes by Dish Name </p>
 <%= form_tag(searchByName_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "Search By Name" %>
       <%= submit_tag "Search", :name => nil %>
     <% end %>
 
+</div>
 
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+
+<p> Search for Recipes by Ingredient </p>
  <%= form_tag(searchByIngredients_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "Search By Ingredients" %>
       <%= submit_tag "Search", :name => nil %>
     <% end %>
 
+</div>
+
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+
+<p> Search for a wine pairing </p>
  <%= form_tag(searchWinePairing_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "Search Wine Pairing" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
 
+</div>
+
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+
+<p> Search for Recipe videos </p>
 <%= form_tag(searchVideo_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "Search Videos" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
 
+</div>
+
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+
+<p> Convert recipe amounts </p>
 <%= form_tag(convertUnits_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "Search unit, ingredient name, target unit" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
 
+</div>
+
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+
+<p> Search Recipes for daily, weekly, or monthly calorie needs </p>
 <%= form_tag(searchCalories_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "number of cals, per time" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
 
+</div>
+
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+
+<p> Search by Recipe ID and get similar recipes </p>
 <%= form_tag(searchRecipeId_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "enter any recipe id" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
+</div>
 
-<%= form_tag(searchRecipeId_path, :method => "get", id: "search-form") do %>
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+
+<p> Click search for food trivia </p>
+<%= form_tag(getFoodTrivia_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "click search" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
+</div>
 
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+
+<p> Enter any question to search quickly </p>
 <%= form_tag(searchQuickAnswer_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "enter question here" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
+</div>
 
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+
+<p> Search nutrition info by dish name </p>
 <%= form_tag(searchNutritionInfo_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "enter dish name here" %>
+      <%= text_field_tag :searchTerm, params[:searchTerm], placeholder: "enter dish name" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
+</div>
