@@ -4,7 +4,12 @@ require 'openssl'
 
 class SearchrecipeController <  ApplicationController
 
-  def searchByName(name)
+  def searchByNam
+
+
+
+    e(name)
+
     # uses 'search site content'
     conn = Faraday.new(:url => "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/site/search?query=" + name)
 
