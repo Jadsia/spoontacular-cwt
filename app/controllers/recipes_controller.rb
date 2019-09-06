@@ -30,36 +30,68 @@ class RecipesController < ApplicationController
     puts @results.class
   end
 
-  def searchvideo
-    SearchrecipeController.new.searchvideo
+  def searchVideo
+    search = params[:searchTerm]
+    @results = SearchrecipeController.new.searchvideo(search)
+    puts "searchByName results type: "
+    puts @results.class
   end
 
-  def convertunits
-    SearchrecipeController.new.convertunits
+  def convertUnits
+    puts " "
+    puts " "
+    puts " "
+    puts " "
+    puts "In convertunits"
+    search = params[:searchTerm]
+    searchTerms = search.split(",")
+    unit = searchTerms[0].strip
+    ingredientname = searchTerms[1].strip
+    targetunit = searchTerms[2].strip
+    @results = SearchrecipeController.new.convertUnits(unit, ingredientname, targetunit)
+    puts "convertunits results type: "
+    puts @results.class
   end
 
-  def searchcalories
-    SearchrecipeController.new.searchcalories
+  def searchCalories
+    search = params[:searchTerm]
+    searchTerms = search.split(",")
+    numbercalories = searchTerms[0].strip
+    time = searchTerms[1].strip
+    @results = SearchrecipeController.new.searchCalories(numbercalories, time)
+    puts "searchByName results type: "
+    puts @results.class
   end
 
-  def searchrecipeid
-    SearchrecipeController.new.searchrecipeid
+  #returns nil result, unclear if it takes argument
+  def searchRecipeId
+    search = params[:searchTerm]
+    @results = SearchrecipeController.new.searchRecipeId(search)
+    puts "searchByName results type: "
+    puts @results.class
   end
 
-  def getfoodtrivia
-    SearchrecipeController.new.getfoodtrivia
+        #simple get/text. Need any additional lines?
+  def getFoodTrivia
+    @results =   SearchrecipeController.new.getFoodTrivia
+    puts "getFoodTrivia results type: "
+    puts @results.class
+
   end
 
-  def quickanswer
-    SearchrecipeController.new.quickanswer
+  def searchQuickAnswer
+    search = params[:searchTerm]
+    @results = SearchrecipeController.new.searchQuickAnswer(search)
+    puts "quick answer results type: "
+    puts @results.class
   end
 
-  def searchnutritioninfo
-    SearchrecipeController.new.searchnutritioninfo
+  def searchNutritionInfo
+    search = params[:searchTerm]
+    @results = SearchrecipeController.new.searchNutritionInfo(search)
+    puts "nutrition info results type: "
+    puts @results.class
   end
-
-
-  def
 
   def new
     @recipe = Recipe.new

@@ -1,14 +1,11 @@
 <h1> Results here! </h1>
-<div>
-   <% @results[:pairedWines].each { |wine| %>
-    <%=  wine %>
-    <% }%>
-    <%=  @results[:pairingText] %>
-    <% @results[:productMatches].each { |product| %>
-       <%= product[:title] %>
-      <%=  product[:description] %>
-      <%=  product[:price] %>
-      <%=  product[:imageUrl] %>
-    <% } %>
 
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+   <%=  @results[:pairingText] %>
+   <br />
+   <% @results[:pairedWines].each { |wine| %>
+      <%=  wine %>
+    <% } %>
 </div><br />

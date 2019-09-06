@@ -4,7 +4,8 @@
 
 <% @results.each { |result| %>
 <div class="display-box w-50 col-10 offset-1">
-   <%=  result[:name] %>
-   <%= image_tag( result[:image], size: "160x100", alt: result[:title] ) %>
+   <%=  result[:title] %>
 </div><br />
  <% } %>
+
+ <%# image not avail in endpint %>
