@@ -3,7 +3,8 @@
 <br />
 
 <div class="display-box w-50 col-10 offset-1">
-  <%=  @results[:calories][:value] %>
+  <%= "There are " + @results[:calories][:value].to_s + " " + @results[:calories][:unit].to_s %>
+
 </div>
 
 <%# no image in results %>
