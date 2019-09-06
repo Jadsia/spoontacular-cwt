@@ -98,6 +98,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
+
   def create
     current_user.recipes.create(recipe_params)
     redirect_to root_path
