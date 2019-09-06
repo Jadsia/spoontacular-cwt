@@ -2,9 +2,10 @@
 
 <br />
 
-<% @results[:pairedWines].each { |result| %>
 <div class="display-box w-50 col-10 offset-1">
-   <%=  result[:pairedWines] %>
-   <%= text_area_tag( result[:pairingText], alt: result[:title] ) %>
+   <%=  @results[:pairingText] %>
+   <br />
+   <% @results[:pairedWines].each { |wine| %>
+      <%=  wine %>
+    <% } %>
 </div><br />
- <% } %>

@@ -26,7 +26,7 @@ class RecipesController < ApplicationController
 
   def searchWinePairing
     search = params[:searchTerm]
-    @results = SearchrecipeController.new.searchWinePairing(search)[:pairedWines]
+    @results = SearchrecipeController.new.searchWinePairing(search)
     puts @results.class
   end
 
