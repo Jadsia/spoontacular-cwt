@@ -86,4 +86,4 @@ gem 'unirest'
 
 gem 'carrierwave', '~> 1.0'
 
-
+gem 'factory_bot'
