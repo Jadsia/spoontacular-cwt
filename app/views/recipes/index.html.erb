@@ -1,2 +1,7 @@
 <h1> What's happening? Welcome to Spoontacular</h1>
+<br />
 
+<% @recipes.each { |recipe| %>
+  <%= recipe.name %>
+  <%= recipe.ingredients %>
+  <% } %>
