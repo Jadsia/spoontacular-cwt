@@ -1,0 +1,6 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+[remote "origin"]
+	url = https://github.com/Jadsia/Spoontacular
