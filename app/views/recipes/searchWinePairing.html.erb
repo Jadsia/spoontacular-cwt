@@ -2,10 +2,24 @@
 
 <br />
 
-<div class="display-box w-50 col-10 offset-1">
+<%# <div class="display-box w-50 col-10 offset-1">
    <%=  @results[:pairingText] %>
-   <br />
+   <%# <br />
    <% @results[:pairedWines].each { |wine| %>
+      <%# <%=  wine %> %>
+    <%# <% } %> %>
+<%# </div><br /> %> %> %>
+
+<%# Card for search wine pairing %>
+<div class="card">
+  <div class="card-header">
+       <%=  @results[:pairingText] %>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p><% @results[:pairedWines].each { |wine| %>
       <%=  wine %>
-    <% } %>
-</div><br />
+    <% } %></p>
+    </blockquote>
+  </div>
+</div>
