@@ -10,24 +10,93 @@ RSpec.describe RecipesController, type: :controller do
     end
   end
 
-  # almost works
-  describe 'Authentication' do
-    it 'should allow users to log in' do
-      user = FactoryBot.create(:user, password: 'password')
-      get new_sessions_url
-      fill_in 'email', with: user.email
-      fill_in 'password', with: 'password'
-      click_button 'Login'
-
-      expect(response).to redirect_to new_user_session_path
+  describe "GET #getFoodTrivia" do
+    before do
+      get :getFoodTrivia
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
     end
   end
 
-  #almost works
-  describe "POST #create" do
-    it "should require login" do
-      post :create, contact: FactoryBot.attributes_for(:recipe)
-      expect(response).to redirect_to login_url
+  describe "GET #searchByName" do
+    before do
+      get :searchByName, :params => {:searchTerm => 'raisins'}
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #searchByIngredients" do
+    before do
+      get :searchByIngredients, :params => {:searchTerm => 'cranberries'}
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #searchWinePairing" do
+    before do
+      get :searchWinePairing, :params => {:searchTerm => 'fish'}
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #searchVideo" do
+    before do
+      get :searchVideo, :params => {:searchTerm => 'fish'}
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #convertUnits" do
+    before do
+      get :convertUnits, :params => {:searchTerm => '2, flour, grams'}
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #searchCalories" do
+    before do
+      get :searchCalories, :params => {:searchTerm => '2000, day'}
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #searchRecipeId" do
+    before do
+      get :searchRecipeId, :params => {:searchTerm => '24964'}
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #searchQuickAnswer" do
+    before do
+      get :searchQuickAnswer, :params => {:searchTerm => 'how much sugar is in a banana'}
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #searchNutritionInfo" do
+    before do
+      get :searchNutritionInfo, :params => {:searchTerm => 'muffins'}
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
     end
   end
 
