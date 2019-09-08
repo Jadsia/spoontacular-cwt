@@ -10,20 +10,19 @@
   </head>
 
   <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Spoontacular</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<nav class="navbar navbar-toggleable-md navbar navbar-light" style="background-color: #e3f2fd;">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">Spoontacular</a>
-
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
-            <%= link_to 'Home', root_path, class: 'navbar-brand' %>
-
-          </li>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+        <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+      </li>
+      </li>
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
             <%= link_to 'About', about_path, class: 'navbar-brand' %>
@@ -48,11 +47,20 @@
             <a class="nav-link" href="#"></a>
               <%= link_to 'Search', search_path, class: 'navbar-brand' %>
           </li>
-        </ul>
-
-      </div>
-    </nav>
-
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
   <% if notice.present? %>
    <p class="alert alert-info"><%= notice %></p>
   <% end %>
