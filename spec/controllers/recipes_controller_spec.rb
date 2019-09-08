@@ -10,6 +10,7 @@ RSpec.describe RecipesController, type: :controller do
     end
   end
 
+  # almost works
   describe 'Authentication' do
     it 'should allow users to log in' do
       user = FactoryBot.create(:user, password: 'password')
@@ -19,6 +20,14 @@ RSpec.describe RecipesController, type: :controller do
       click_button 'Login'
 
       expect(response).to redirect_to new_user_session_path
+    end
+  end
+
+  #almost works
+  describe "POST #create" do
+    it "should require login" do
+      post :create, contact: FactoryBot.attributes_for(:recipe)
+      expect(response).to redirect_to login_url
     end
   end
 
