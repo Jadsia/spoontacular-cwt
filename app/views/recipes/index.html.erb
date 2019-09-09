@@ -3,10 +3,13 @@
 
 <% @recipes.each { |recipe| %>
 <div class="card result-card" style="max-width: 24rem;">
-  <div class="card-header"><%= recipe.name %></div>
-  <div class="card-body">
-    <p class="card-text"><%= recipe.ingredients %><br /><%= recipe.directions %>
-    <% } %></p>
+  <div class="card-header">Name: <%= recipe.name %></div>
+    <div class="card-body">
+      <p class="card-text">Ingredients: <%= recipe.ingredients %><br />Directions:<%= recipe.directions %></p>
+      </div>
   </div>
-</div>
+  <br />
+      <% } %>
+
+
 
