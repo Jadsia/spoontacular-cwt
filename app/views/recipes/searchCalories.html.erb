@@ -3,33 +3,18 @@
 <br />
 
 <% @results[:meals].each { |result| %>
-<div class="display-box w-50 col-10 offset-1">
-   <%=  result[:title] %>
-</div><br />
+<div class="card result-card" style="width: 22rem;">
+  <div class="card-body">
+        <p class="card-text">
+    <%=  result[:title] %></p>
+  </div>
+</div>
  <% } %>
 
- <div class="display-box w-50 col-10 offset-1">
-   <%=  @results[:nutrients][:calories] %>
-   <%=  @results[:nutrients][:protein] %>
+ <div class="card result-card" style="width: 22rem;">
+   <%=  "There are   " + @results[:nutrients][:calories].to_s + "   calories in the recipes above   " %>
+   <%= "and   " + @results[:nutrients][:protein].to_s + "   g of protein" %>
  </div>
 
-<%# does not return image URL %>
 
-<%# Add words to number results e.g. says "# calories, # g protein"
-Card for calories %>
-<div class="card border-secondary mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body text-secondary">
-    <h5 class="card-title">Secondary card title</h5>
-    <p class="card-text">Quick sample text to create the card title and make up the body of the card's content.</p>
-  </div>
 
-<%# Card groups
-<div class="card-group">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div> %>

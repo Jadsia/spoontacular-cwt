@@ -2,16 +2,12 @@
 
 <br />
 
-<div class="display-box w-50 col-10 offset-1">
-  <%= "There are " + @results[:calories][:value].to_s + " " + @results[:calories][:unit].to_s %>
-
-</div>
-
-<%# no image in results %>
-
-<div class="card card-accent-secondary mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Secondary card title</h5>
-    <p class="card-text">Quick sample text to create the card title and make up the body of the card's content.</p>
+<div class="card result-card" style="max-width: 18rem;">
+  <div class="card-header">Calorie Count</div>
+      <div class="card-body">
+          <p class="card-title">
+        <%= "There are " + @results[:calories][:value].to_s + " " + @results[:calories][:unit].to_s %></p>
+      </div>
   </div>
+ </div>
+

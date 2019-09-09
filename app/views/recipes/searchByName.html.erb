@@ -2,19 +2,16 @@
 
 <br />
 
-<% @results.each { |result| %>
-<div class="display-box w-50 col-10 offset-1">
-   <%=  result[:name] %>
-   <%= image_tag( result[:image], size: "160x100", alt: result[:title] ) %>
-   <%= link_to nil, result[:link] %>
-</div><br />
+<div class="card-group">
+  <% @results.each { |result| %>
+  <div class="card result-card" style="width: 18rem;">
 
-<%# Card for search by name results
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">Quick sample text to create the card title and make up the body of the card's content.</p>
-  </div> %>
-</div>
+    <img class="card-img-top" src=<%= result[:image] %>  alt=<%= result[:title] %> >
+    <div class="card-body">
+      <p class="card-text"><%=  result[:name] %><br /><%= link_to 'Recipe Link', result[:link] %></p>
+    </div>
+
+  </div>
 
  <% } %>
+</div>

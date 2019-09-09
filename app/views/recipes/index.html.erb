@@ -1,13 +1,12 @@
 <h1> What's happening? Welcome to Spoontacular</h1>
 <br />
 
-<div class="card card-accent-secondary mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
+<% @recipes.each { |recipe| %>
+<div class="card result-card" style="max-width: 24rem;">
+  <div class="card-header"><%= recipe.name %></div>
   <div class="card-body">
-    <h5 class="card-title">Secondary card title</h5>
-    <p class="card-text"><% @recipes.each { |recipe| %>
-  <%= recipe.name %>
-  <%= recipe.ingredients %>
-  <% } %></p>
+    <p class="card-text"><%= recipe.ingredients %>
+    <% } %></p>
   </div>
+</div>
 

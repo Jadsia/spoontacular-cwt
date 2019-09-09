@@ -2,10 +2,9 @@
 
 <br />
 
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" <%= image_tag( @results[:image], size: "250x250", alt: @results[:title] ) %> >
+<div class="card result-card" style="width: 18rem;">
+  <img class="card-img-top" <%= image_tag( @results[:image], size: "250x250", alt: @results[:title] ) %>
   <div class="card-body">
     <p class="card-text"><%=  @results[:answer] %></p>
-  </div> %>
-
-<%# doesn't like nil class %>
+  </div>
+</div>
