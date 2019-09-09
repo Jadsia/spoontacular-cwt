@@ -1,0 +1,2 @@
+module SearchRecipeControllerHelper
+end
