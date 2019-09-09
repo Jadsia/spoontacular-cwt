@@ -1,11 +1,21 @@
-<div class="display-box col-10 offset-1">
-  <h1>Enter Your Recipe Here!</h1>
 
   <%= simple_form_for @recipe do |f| %>
-    <%= f.input :name %>
-    <%= f.input :ingredients %>
-    <%= f.input :directions %>
+  <div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <h1>Enter Your Recipe Here!</h1>
+        </div>
+
+  <div class="form-content">
+    <div class="row">
+
+  <div class="col-md-12">
+
+  <div class="form-group">
+    <%= f.input :name, placeholder: "Recipe Name", class: "form-control" %>
+    <%= f.input :ingredients, placeholder: "Enter Ingredients", class: "form-control" %>
+    <%= f.input :directions, placeholder: "Directions", class: "form-control" %>
     <br />
-    <%= f.submit 'Create', class: 'btn btn-primary' %>
+    <%= f.submit 'Create', class:"btnSubmit" %>
   <% end %>
 </div
