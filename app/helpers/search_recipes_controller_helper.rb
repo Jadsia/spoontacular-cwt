@@ -1,2 +1,2 @@
-module SearchRecipeControllerHelper
+module SearchRecipesControllerHelper
 end
