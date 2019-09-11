@@ -11,54 +11,48 @@
 
   <body>
 
-<nav class="navbar navbar-toggleable-md navbar navbar-light" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-toggleable-md navbar navbar-light" style="background-color: #e3f2fd;">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Spoontacular</a>
+      <%= link_to 'Spoontacular', root_path, class: 'navbar-brand' %>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item active">
-            <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
-            <%= link_to 'Home', root_path, class: 'navbar-brand' %>
-
+            <a class="nav-link" href="<%= root_path %>%">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"></a>
-            <%= link_to 'About', about_path, class: 'navbar-brand' %>
+            <%= link_to 'About', about_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"></a>
-            <%= link_to 'Sign in', new_user_session_path, class: 'navbar-brand' %>
+            <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"></a>
-            <%= link_to 'Sign up', new_user_registration_path, class: 'navbar-brand' %>
+            <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"></a>
-            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'navbar-brand' %>
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"></a>
-              <%= link_to 'Post a Recipe', new_recipes_path, class: 'navbar-brand' %>
+            <%= link_to 'Post a Recipe', new_recipes_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"></a>
-              <%= link_to 'Search', search_path, class: 'navbar-brand' %>
+            <%= link_to 'Search', search_path, class: 'nav-link' %>
           </li>
         </ul>
-
       </div>
     </nav>
 
-  <% if notice.present? %>
-   <p class="alert alert-info"><%= notice %></p>
-  <% end %>
-  <% if alert.present? %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
-    <%= yield %>
+    <% if notice.present? %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+    <% if alert.present? %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
