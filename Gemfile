@@ -8,11 +8,20 @@ ruby '2.6.3'
 gem 'rails',                    '~> 5.2.3'
 
 gem 'bootsnap',                 '>= 1.1.0', require: false
-gem 'bootstrap',                '~> 4.3', '>= 4.3.1'
+gem 'bootstrap',                '4.0.0.alpha6'
+
+gem 'carrierwave',              '~> 1.0' # ????
+gem 'coffee-rails',             '~> 5.0'
+
+gem 'devise',                   '~> 4.7', '>= 4.7.1'
+
+gem 'faraday',                  '~> 0.15.4'
+gem 'figaro',                   '~> 1.1', '>= 1.1.1'
 
 gem 'jquery-rails',             '~> 4.3', '>= 4.3.5'
 
 gem 'pg',                       '>= 0.18', '< 2.0'
+gem 'popper_js',                '~> 1.11.1'
 gem 'puma',                     '~> 3.11'
 
 gem 'sass-rails',               '~> 5.0'
@@ -22,6 +31,11 @@ gem 'tether-rails',             '~> 1.4'
 gem 'turbolinks',               '~> 5'
 
 gem 'uglifier',                 '>= 1.3.0'
+gem 'unirest',                  '~> 1.1', '>= 1.1.2'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
 
 group :development, :test do
   gem 'byebug',                 platforms: %i[mri mingw x64_mingw]

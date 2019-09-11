@@ -1,0 +1,13 @@
+<h1> Results here! </h1>
+
+<br />
+
+<% @results[:videos].each { |result| %>
+<div class="display-box w-50 col-10 offset-1">
+   <%=  result[:title] %>
+   <%=  result[:youTubeId] %>
+   <%#= video_tag( result[:youTubeId], alt: result[:title] ) %>
+    <%=  result[:rating] %>
+     <%=  result[:thumbnail] %>
+</div><br />
+ <% } %>

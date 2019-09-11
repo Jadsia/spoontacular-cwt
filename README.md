@@ -4,6 +4,10 @@
 
 This app powers Spoontacular located [here](https://spoontacular.herokuapp.com)
 
+## Demonstration Video
+
+A demonstration of this project can be found [here](https://youtu.be/QxLWzhk140U)
+
 ## Reading and Resources
 
 [Individual Project Guidelines](./INDIVIDUAL-PROJECT.md)

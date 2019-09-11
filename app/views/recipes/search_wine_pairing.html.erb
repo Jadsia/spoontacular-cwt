@@ -1,0 +1,11 @@
+<h1> Results here! </h1>
+
+<br />
+
+<div class="display-box w-50 col-10 offset-1">
+   <%=  @results[:pairingText] %>
+   <br />
+   <% @results[:pairedWines].each { |wine| %>
+      <%=  wine %>
+    <% } %>
+</div><br />
