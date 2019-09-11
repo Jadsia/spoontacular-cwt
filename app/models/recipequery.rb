@@ -1,32 +1,33 @@
-require 'net/http'
-require 'json'
-require 'faraday'
+# frozen_string_literal: true
 
-class Recipequery < ApplicationRecord
-  base_uri 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
+# require 'net/http'
+# require 'json'
+# require 'faraday'
 
-  def index
-    @queries = RecipeQuery.search(params[:id])
-  end
+# class Recipequery < ApplicationRecord
+#   base_uri = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
 
-  def get_data(name)
-    self.class.get('food/site/search?query=' + name)
-    get_data.parsed_response
-  end
+#   def index
+#     @queries = RecipeQuery.search(params[:id])
+#   end
 
-url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/site/search?query=" + name
-uri = URI(url)
-response = Net::HTTP.get(uri)
-JSON.parse(response)
-end
+#   def get_data(name)
+#     self.class.get('food/site/search?query=' + name)
+#     get_data.parsed_response
+#   end
 
-url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/site/search?query=" + name
+# url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/site/search?query=" + name
+# uri = URI(url)
+# response = Net::HTTP.get(uri)
+# JSON.parse(response)
+# end
 
-conn = Faraday.new(url: url) do |faraday|
-  faraday.adapter Faraday.default_adapter
-  faraday.response :json
-end
+# url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/site/search?query=" + name
 
-response = conn.get('search', type: 'artist', q: 'tycho')
-response.body
+# conn = Faraday.new(url: url) do |faraday|
+#   faraday.adapter Faraday.default_adapter
+#   faraday.response :json
+# end
 
+# response = conn.get('search', type: 'artist', q: 'tycho')
+# response.body
