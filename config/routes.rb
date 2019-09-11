@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'about', to: 'recipes#about'
   get '/search', to: 'search#index', as: 'search'
   get '/searchByIngredients', to: 'recipes#searchByIngredients', as: 'searchByIngredients'
-  get '/searchByName', to: 'recipes#searchByName', as: 'searchByName'
+  get '/searchByName', to: 'recipes#search_by_name', as: 'searchByName'
   get '/searchWinePairing', to: 'recipes#searchWinePairing', as: 'searchWinePairing'
   get '/searchVideo', to: 'recipes#searchVideo', as: 'searchVideo'
   get '/convertUnits', to: 'recipes#convertUnits', as: 'convertUnits'

@@ -9,9 +9,9 @@ class RecipesController < ApplicationController
     @recipes = Recipe.find(params[:id])
   end
 
-  def searchByName
+  def search_by_name
     search = params[:searchTerm]
-    @results = SearchrecipeController.new.searchByName(search)[:Recipes]
+    @results = RecipeQuery.search_by_name(search)[:Recipes]
   end
 
   def searchByIngredients
