@@ -10,90 +10,90 @@ RSpec.describe RecipesController, type: :controller do
     end
   end
 
-  describe "GET #getFoodTrivia" do
+  describe "GET #get_food_trivia" do
     before do
-      get :getFoodTrivia
+      get :get_food_trivia
     end
     it "returns http success" do
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET #searchByName" do
+  describe "GET #search_by_name" do
     before do
-      get :searchByName, :params => {:searchTerm => 'raisins'}
+      get :search_by_name, :params => {:searchTerm => 'raisins'}
     end
     it "returns http success" do
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET #searchByIngredients" do
+  describe "GET #search_by_ingredients" do
     before do
-      get :searchByIngredients, :params => {:searchTerm => 'cranberries'}
+      get :search_by_ingredients, :params => {:searchTerm => 'cranberries'}
     end
     it "returns http success" do
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET #searchWinePairing" do
+  describe "GET #search_wine_pairing" do
     before do
-      get :searchWinePairing, :params => {:searchTerm => 'fish'}
+      get :search_wine_pairing, :params => {:searchTerm => 'fish'}
     end
     it "returns http success" do
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET #searchVideo" do
+  describe "GET #search_video" do
     before do
-      get :searchVideo, :params => {:searchTerm => 'fish'}
+      get :search_video, :params => {:searchTerm => 'fish'}
     end
     it "returns http success" do
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET #convertUnits" do
+  describe "GET #convert_units" do
     before do
-      get :convertUnits, :params => {:searchTerm => '2, flour, grams'}
+      get :convert_units, :params => {:searchTerm => '2, flour, grams'}
     end
     it "returns http success" do
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET #searchCalories" do
+  describe "GET #search_calories" do
     before do
-      get :searchCalories, :params => {:searchTerm => '2000, day'}
+      get :search_calories, :params => {:searchTerm => '2000, day'}
     end
     it "returns http success" do
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET #searchRecipeId" do
+  describe "GET #search_recipe_id" do
     before do
-      get :searchRecipeId, :params => {:searchTerm => '24964'}
+      get :search_recipe_id, :params => {:searchTerm => '24964'}
     end
     it "returns http success" do
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET #searchQuickAnswer" do
+  describe "GET #search_quick_answer" do
     before do
-      get :searchQuickAnswer, :params => {:searchTerm => 'how much sugar is in a banana'}
+      get :search_quick_answer, :params => {:searchTerm => 'how much sugar is in a banana'}
     end
     it "returns http success" do
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET #searchNutritionInfo" do
+  describe "GET #search_nutrition_info" do
     before do
-      get :searchNutritionInfo, :params => {:searchTerm => 'muffins'}
+      get :search_nutrition_info, :params => {:searchTerm => 'muffins'}
     end
     it "returns http success" do
       expect(response).to have_http_status(:success)

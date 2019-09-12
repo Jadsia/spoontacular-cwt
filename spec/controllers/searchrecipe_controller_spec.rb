@@ -2,43 +2,43 @@ require 'rails_helper'
 
 RSpec.describe SearchrecipeController, type: :controller do
     it 'should return at least one trivia fact back' do
-      controller.getFoodTrivia()[:text].length > 0
+      controller.get_food_trivia()[:text].length > 0
   end
 
   it 'should return results for search term' do
-    controller.searchByName("cake")[:text] && controller.searchByName("cake")[:text].length > 0
+    controller.search_by_name("cake")[:text] && controller.search_by_name("cake")[:text].length > 0
 end
 
 it 'should return results for search term' do
-  controller.searchbyingredient("onions") && controller.searchbyingredient("onions").length > 0
+  controller.search_by_ingredient("onions") && controller.search_by_ingredient("onions").length > 0
 end
 
 it 'should return results for search term' do
-  controller.searchWinePairing("fish")[:text] && controller.searchWinePairing("fish")[:text].length > 0
+  controller.search_wine_pairing("fish")[:text] && controller.search_wine_pairing("fish")[:text].length > 0
 end
 
 it 'should return results for search term' do
-  controller.searchvideo("milk")[:text] && controller.searchvideo("milk")[:text].length > 0
+  controller.search_video("milk")[:text] && controller.search_video("milk")[:text].length > 0
 end
 
 it 'should return results for search term' do
-  controller.convertUnits("2", "flour", "grams")[:answer] && controller.convertUnits("2", "flour", "grams")[:answer].length > 0
+  controller.convert_units("2", "flour", "grams")[:answer] && controller.convert_units("2", "flour", "grams")[:answer].length > 0
 end
 
 it 'should return results for search term' do
-  controller.searchCalories("2000", "day")[:text] && controller.searchCalories("2000", "day")[:text].length > 0
+  controller.search_calories("2000", "day")[:text] && controller.search_calories("2000", "day")[:text].length > 0
 end
 
 it 'should return results for search term' do
-  controller.searchRecipeId("25643") && controller.searchRecipeId("25643").length > 0
+  controller.search_recipe_id("25643") && controller.search_recipe_id("25643").length > 0
 end
 
 it 'should return results for search term' do
-  controller.searchQuickAnswer("how much sugar is in a banana")[:text] && controller.searchQuickAnswer("how much sugar is in a banana")[:text].length > 0
+  controller.search_quick_answer("how much sugar is in a banana")[:text] && controller.search_quick_answer("how much sugar is in a banana")[:text].length > 0
 end
 
 it 'should return results for search term' do
-  controller.searchNutritionInfo("pie")[:text] && controller.searchNutritionInfo("pie")[:text].length > 0
+  controller.search_nutrition_info("pie")[:text] && controller.search_nutrition_info("pie")[:text].length > 0
 end
 
 end
