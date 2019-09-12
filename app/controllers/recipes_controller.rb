@@ -11,6 +11,15 @@ class RecipesController < ApplicationController
     @recipes = Recipe.find(params[:id])
   end
 
+  def new
+    @recipe = Recipe.new
+  end
+
+  def create
+    current_user.recipes.create(recipe_params)
+    redirect_to root_path
+  end
+
   def search_by_name
     search = params[:searchTerm]
     @results = RecipeQuery.search_by_name(search)[:Recipes]
@@ -65,15 +74,6 @@ class RecipesController < ApplicationController
   def search_nutrition_info
     search = params[:searchTerm]
     @results = RecipeQuery.search_nutrition_info(search)
-  end
-
-  def new
-    @recipe = Recipe.new
-  end
-
-  def create
-    current_user.recipes.create(recipe_params)
-    redirect_to root_path
   end
 
   private
