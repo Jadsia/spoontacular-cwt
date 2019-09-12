@@ -15,7 +15,7 @@ gem 'coffee-rails',             '~> 5.0'
 
 gem 'devise',                   '~> 4.7', '>= 4.7.1'
 
-gem 'faraday',                  '~> 0.15.4'
+gem 'faraday',                  '~> 1.0.0.pre.rc1'
 gem 'figaro',                   '~> 1.1', '>= 1.1.1'
 
 gem 'jquery-rails',             '~> 4.3', '>= 4.3.5'
