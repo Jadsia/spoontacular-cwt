@@ -1,12 +1,5 @@
 @import 'bootstrap';
 
-// body {
-//   background: image_url('recipebkg.jpg');
-//   font-family: 'Josefin Sans', sans-serif;
-//   background-repeat: no-repeat;
-//   background-size: auto;
-// }
-
 body {
   background: image_url('recipebkg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -16,6 +9,7 @@ body {
 }
 
 .navbar {
+  background-color: #22c1ab54 !important;
   box-shadow: 0px 1px 3px #2a2a2a;
 }
 
@@ -34,4 +28,53 @@ p {
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+}
+
+.search-button {
+  margin-top: 3%;
+  margin-left: 75%;
+}
+
+.search-card {
+  width: 400px;
+  margin-left: 45%;
+}
+
+.result-card {
+  margin-left: 35%;
+}
+
+.note {
+  text-align: center;
+  height: 80px;
+  background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+  color: #fff;
+  font-weight: bold;
+  line-height: 80px;
+}
+.form-content {
+  padding: 5%;
+  border: 1px solid #ced4da;
+  margin-bottom: 2%;
+}
+.form-control {
+  border-radius: 1.5rem;
+}
+.btnSubmit {
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1%;
+  width: 20%;
+  cursor: pointer;
+  background: #0062cc;
+  color: #fff;
+}
+
+.pass-reset {
+  margin-top: 2%;
+}
+
+.hover-btn:hover {
+  color: #fff;
+  text-decoration: underline;
 }
