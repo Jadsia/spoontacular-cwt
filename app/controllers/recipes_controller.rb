@@ -14,57 +14,55 @@ class RecipesController < ApplicationController
     @results = RecipeQuery.search_by_name(search)[:Recipes]
   end
 
-  def searchByIngredients
+  def search_by_ingredients
     search = params[:searchTerm]
-    @results = SearchrecipeController.new.searchbyingredient(search)
+    @results = RecipeQuery.search_by_ingredients(search)
   end
 
-  def searchWinePairing
+  def search_wine_pairing
     search = params[:searchTerm]
-    @results = SearchrecipeController.new.searchWinePairing(search)
+    @results = RecipeQuery.search_wine_pairing(search)
   end
 
-  def searchVideo
+  def search_video
     search = params[:searchTerm]
-    @results = SearchrecipeController.new.searchvideo(search)
+    @results = RecipeQuery.search_video(search)
   end
 
-  def convertUnits
+  def convert_units
     search = params[:searchTerm]
     searchTerms = search.split(",")
     unit = searchTerms[0].strip
     ingredientname = searchTerms[1].strip
     targetunit = searchTerms[2].strip
-    @results = SearchrecipeController.new.convertUnits(unit, ingredientname, targetunit)
+    @results = RecipeQuery.convert_units(unit, ingredientname, targetunit)
   end
 
-  def searchCalories
+  def search_calories
     search = params[:searchTerm]
     searchTerms = search.split(",")
     numbercalories = searchTerms[0].strip
     time = searchTerms[1].strip
-    @results = SearchrecipeController.new.searchCalories(numbercalories, time)
+    @results = RecipeQuery.search_calories(numbercalories, time)
   end
 
-  #returns nil result, unclear if it takes argument
-  def searchRecipeId
+  def search_recipe_id
     search = params[:searchTerm]
-    @results = SearchrecipeController.new.searchRecipeId(search)
+    @results = RecipeQuery.search_recipe_id(search)
   end
 
-        #simple get/text. Need any additional lines?
-  def getFoodTrivia
-    @results =   SearchrecipeController.new.getFoodTrivia
+  def get_food_trivia
+    @results = RecipeQuery.get_food_trivia
   end
 
-  def searchQuickAnswer
+  def search_quick_answer
     search = params[:searchTerm]
-    @results = SearchrecipeController.new.searchQuickAnswer(search)
+    @results = RecipeQuery.search_quick_answer(search)
   end
 
-  def searchNutritionInfo
+  def search_nutrition_info
     search = params[:searchTerm]
-    @results = SearchrecipeController.new.searchNutritionInfo(search)
+    @results = RecipeQuery.search_nutrition_info(search)
   end
 
   def new
