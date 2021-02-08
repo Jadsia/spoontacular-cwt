@@ -10,7 +10,7 @@ gem 'rails',                    '~> 5.2.3'
 gem 'bootsnap',                 '>= 1.1.0', require: false
 gem 'bootstrap',                '4.0.0.alpha6'
 
-gem 'carrierwave',              '~> 1.0' # ????
+gem 'carrierwave',              '~> 1.3' # ????
 gem 'coffee-rails',             '~> 5.0'
 
 gem 'devise',                   '~> 4.7', '>= 4.7.1'
